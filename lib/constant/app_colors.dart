@@ -10,4 +10,5 @@ class AppColors {
   static const Color lighterGreyColor = Color(0xffA2A2A2);
   static const Color normalActiveGreyColor = Color(0xffD8D8D8);
   static const Color yellowColor = Color(0xffFBBE21);
+  static const Color lineColor = Color(0xffF9F2ED);
 }
