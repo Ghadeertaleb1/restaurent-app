@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/constant/text.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 
 class ButtonAddItem extends StatelessWidget {
   const ButtonAddItem({
@@ -10,8 +11,8 @@ class ButtonAddItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      textStyle(
-          18, AppColors.backgroundColor, FontWeight.w600, "\$ 5.99", 1.5, 0),
+      customText(18, AppColors.backgroundColor, FontWeight.w600,
+          TextApp.coffeePrice, 1.5, 0, TextAlign.center),
       Container(
         width: 32,
         height: 32,

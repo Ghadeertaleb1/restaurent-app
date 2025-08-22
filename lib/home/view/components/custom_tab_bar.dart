@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constant/text.dart';
 import 'package:flutter_application_1/home/view/components/components.dart';
 
 class CustomTabBar extends StatelessWidget {
@@ -17,25 +18,25 @@ class CustomTabBar extends StatelessWidget {
       tabs: [
         Tab(
           child: CatogaryContainerTab(
-            title: "All Coffee",
+            title: TextApp.allCoffee,
             isSelected: true,
           ),
         ),
         Tab(
           child: CatogaryContainerTab(
-            title: "Machiato",
+            title: TextApp.machiato,
             isSelected: false,
           ),
         ),
         Tab(
           child: CatogaryContainerTab(
-            title: "Latte",
+            title: TextApp.latte,
             isSelected: false,
           ),
         ),
         Tab(
           child: CatogaryContainerTab(
-            title: "Americano",
+            title: TextApp.americano,
             isSelected: false,
           ),
         ),

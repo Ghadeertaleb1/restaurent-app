@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_application_1/constant/images.dart';
+import 'package:flutter_application_1/constant/text.dart';
+import 'package:flutter_application_1/core/shared/asset_image_widget.dart';
+import 'package:flutter_application_1/core/shared/custom_buttton.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
+import 'package:flutter_application_1/onboarding/controller/on_boarding_bloc.dart';
+import 'package:flutter_application_1/onboarding/controller/on_boarding_event.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OnBoardingBage extends StatelessWidget {
   const OnBoardingBage({super.key});
@@ -15,59 +22,50 @@ class OnBoardingBage extends StatelessWidget {
         height: double.infinity,
         child: Stack(
           children: [
-            SizedBox(
+            const SizedBox(
               width: double.infinity,
               height: 500,
-              child: Image.asset(
-                "images/onboarding.png",
+              child: ImageAssetWidget(
+                imagePath: ImagesApp.onboarding,
                 fit: BoxFit.cover,
               ),
             ),
             Positioned(
                 top: 452,
+                left: 24,
+                right: 24,
                 child: Container(
                     color: AppColors.backgroundColor.withOpacity(0.5),
                     height: 360,
                     width: 375,
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Fall in Love with\n Coffee in Blissful\nDelight!",
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.sora(
-                              letterSpacing: 0.5,
-                              fontSize: 32,
-                              height: 1.5,
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.secondaryColor,
-                            )),
+                        customText(
+                            32,
+                            AppColors.secondaryColor,
+                            FontWeight.w600,
+                            TextApp.onBoardingTitle,
+                            1.5,
+                            0.5,
+                            TextAlign.center),
                         const SizedBox(height: 8),
-                        Text(
-                            "Welcome to our cozy coffee corner, where every cup is a delightful for you.",
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.sora(
-                              letterSpacing: 1,
-                              fontSize: 14,
-                              height: 1.5,
-                              fontWeight: FontWeight.normal,
-                              color: AppColors.secondaryColor,
-                            )),
-                        Container(
-                          height: 56,
-                          width: 327,
-                          decoration: BoxDecoration(
-                              color: AppColors.buttonColor,
-                              borderRadius: BorderRadius.circular(16)),
-                          margin: const EdgeInsets.only(
-                              top: 32, left: 24, right: 24),
-                          child: Center(
-                              child: Text("Get Started",
-                                  style: GoogleFonts.sora(
-                                    letterSpacing: 0,
-                                    height: 1.5,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    color: AppColors.secondaryColor,
-                                  ))),
+                        customText(
+                            14,
+                            AppColors.secondaryColor,
+                            FontWeight.w400,
+                            TextApp.onBoardingSubtitle,
+                            1.5,
+                            1,
+                            TextAlign.center),
+                        const SizedBox(height: 32),
+                        CustomButton(
+                          text: "Get Started",
+                          onPressed: () {
+                            context
+                                .read<OnBoardingBloc>()
+                                .add(OnBoardingNextEvent());
+                          },
                         )
                       ],
                     )))

@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Text textStyle(double size, Color color, FontWeight weight, String text,
-    double height, double letterSpacing) {
+Text customText(double size, Color color, FontWeight weight, String text,
+    double height, double letterSpacing, TextAlign textAlign) {
   return Text(
+    textAlign: textAlign,
     text,
     style: GoogleFonts.sora(
         letterSpacing: letterSpacing,

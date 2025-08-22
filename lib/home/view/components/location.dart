@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Location extends StatelessWidget {
@@ -11,8 +11,8 @@ class Location extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      textStyle(14, AppColors.normalActiveGreyColor, FontWeight.w600,
-          "Iraq, Baghdad", 1.5, 0),
+      customText(14, AppColors.normalActiveGreyColor, FontWeight.w600,
+          "Iraq, Baghdad", 1.5, 0, TextAlign.center),
       const SizedBox(
         width: 4,
       ),

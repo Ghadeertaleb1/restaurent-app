@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ItemDetailesText extends StatelessWidget {
-  final Text textStyle;
-  const ItemDetailesText({
+class ItemDetailesTextAlign extends StatelessWidget {
+  final Text text;
+  const ItemDetailesTextAlign({
     super.key,
-    required this.textStyle,
+    required this.text,
   });
 
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerLeft,
-      child: textStyle,
+      child: text,
     );
   }
 }

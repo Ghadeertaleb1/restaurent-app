@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 
 class CatogaryContainerTab extends StatelessWidget {
   final bool isSelected;
@@ -30,14 +30,15 @@ class CatogaryContainerTab extends StatelessWidget {
               ],
             )
           : BoxDecoration(),
-      child: Text(title,
-          textAlign: TextAlign.start,
-          style: GoogleFonts.sora(
-            fontSize: 14,
-            height: 1.5,
-            fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
-            color: isSelected ? Colors.white : AppColors.backgroundColor,
-          )),
+      child: customText(
+        14,
+        isSelected ? Colors.white : AppColors.backgroundColor,
+        isSelected ? FontWeight.w600 : FontWeight.normal,
+        title,
+        1.5,
+        0,
+        TextAlign.center,
+      ),
     );
   }
 }

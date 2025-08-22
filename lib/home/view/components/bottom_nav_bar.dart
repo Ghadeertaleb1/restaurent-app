@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
 import 'package:flutter_application_1/constant/icons.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 import 'package:flutter_application_1/home/view/components/nav_bar_icon.dart';
 
 class BottomNavBar extends StatelessWidget {

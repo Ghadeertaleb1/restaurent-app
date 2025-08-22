@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 
 class MainHomeContainer extends StatelessWidget {
   final Widget child;

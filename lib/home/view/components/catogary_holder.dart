@@ -12,6 +12,7 @@ class CatogarysHolder extends StatelessWidget {
     return Container(
       color: AppColors.white,
       child: GridView.builder(
+          shrinkWrap: true,
           padding: const EdgeInsets.only(left: 24, right: 24, top: 16),
           scrollDirection: Axis.vertical,
           itemCount: 6,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 import 'package:flutter_application_1/detail/view/components/button_widget.dart';
-import 'package:flutter_application_1/home/view/components/item_detailes_tect.dart';
+import 'package:flutter_application_1/core/shared/item_detailes_text_align.dart';
 
 class BuyNowWidget extends StatelessWidget {
   const BuyNowWidget({
@@ -13,11 +13,11 @@ class BuyNowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         margin: EdgeInsets.only(
-          top: 20,
+          top: 24,
         ),
         padding: EdgeInsets.only(left: 24, right: 24, top: 16, bottom: 25),
         width: double.infinity,
-        height: 100,
+        height: 118,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20)),
@@ -29,12 +29,13 @@ class BuyNowWidget extends StatelessWidget {
         ),
         child: Row(children: [
           Column(children: [
-            ItemDetailesText(
-                textStyle: textStyle(14, AppColors.lighterGreyColor,
-                    FontWeight.normal, "Price", 1.2, 0)),
-            ItemDetailesText(
-                textStyle: textStyle(18, AppColors.buttonColor, FontWeight.w600,
-                    "\$1.23", 1.5, 0))
+            ItemDetailesTextAlign(
+              text: customText(14, AppColors.lighterGreyColor,
+                  FontWeight.normal, "Price", 1.2, 0, TextAlign.center),
+            ),
+            ItemDetailesTextAlign(
+                text: customText(18, AppColors.buttonColor, FontWeight.w600,
+                    "\$1.23", 1.5, 0, TextAlign.center)),
           ]),
           Spacer(),
           Column(children: [

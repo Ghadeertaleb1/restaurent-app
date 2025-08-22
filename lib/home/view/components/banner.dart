@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 
 class HomeBanner extends StatelessWidget {
   final String image;
@@ -12,17 +12,16 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 327,
-      height: isDetail ? 202 : 140,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [sharedShadow()],
-        image: DecorationImage(
-          image: AssetImage(
-            image,
+    return AspectRatio(
+      aspectRatio: 327 / (isDetail ? 202 : 140), // width / height
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [sharedShadow()],
+          image: DecorationImage(
+            image: AssetImage(image),
+            fit: BoxFit.cover,
           ),
-          fit: BoxFit.cover,
         ),
       ),
     );

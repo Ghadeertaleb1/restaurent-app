@@ -8,5 +8,7 @@ class AppIcons {
   static const String delivery = '${base}delivery.svg';
   static const String quality = '${base}quality.svg';
   static const String addMilk = '${base}addMilk.svg';
+  static const String wallet = '${base}wallet.svg';
+  static const String arrowDowq = '${base}arrow_down.svg';
   static const String star = '${base}star.svg';
 }

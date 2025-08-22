@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
 import 'package:flutter_application_1/constant/icons.dart';
-import 'package:flutter_application_1/constant/shared.dart';
-import 'package:flutter_application_1/home/view/components/item_detailes_tect.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
+import 'package:flutter_application_1/core/shared/item_detailes_text_align.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -18,9 +18,9 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
       SvgPicture.asset(AppIcons.arrowBack),
-      ItemDetailesText(
-        textStyle: textStyle(
-            16, AppColors.backgroundColor, FontWeight.w600, title, 1.2, 0),
+      ItemDetailesTextAlign(
+        text: customText(16, AppColors.backgroundColor, FontWeight.w600, title,
+            1.2, 0, TextAlign.center),
       ),
       isDetail ? SvgPicture.asset(AppIcons.heart) : Container(),
     ]);

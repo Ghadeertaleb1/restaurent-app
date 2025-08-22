@@ -2,30 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
 import 'package:flutter_application_1/core/shared/shared_style.dart';
 
-class ButtonWidget extends StatelessWidget {
-  final void onTap;
+class CustomButton extends StatelessWidget {
+  final VoidCallback? onPressed;
   final String text;
-  final double width;
-  final double height;
-  const ButtonWidget({
+  const CustomButton({
     super.key,
-    this.onTap,
+    this.onPressed,
     required this.text,
-    required this.width,
-    required this.height,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: onPressed,
       child: Container(
-        alignment: Alignment.center,
+        height: 56,
+        width: 327,
         decoration: BoxDecoration(
             color: AppColors.buttonColor,
             borderRadius: BorderRadius.circular(16)),
-        width: width,
-        height: height,
-        child: mainTextStyle(16, text, AppColors.white),
+        margin: const EdgeInsets.only(top: 32, left: 24, right: 24),
+        child: Center(
+            child: customText(16, AppColors.secondaryColor, FontWeight.w600,
+                text, 1.5, 0, TextAlign.center)),
       ),
     );
   }

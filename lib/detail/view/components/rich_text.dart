@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class RichTextWidget extends StatelessWidget {
   final String text1;

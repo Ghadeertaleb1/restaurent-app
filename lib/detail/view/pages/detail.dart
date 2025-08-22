@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
 import 'package:flutter_application_1/constant/icons.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/constant/images.dart';
+import 'package:flutter_application_1/constant/text.dart';
+import 'package:flutter_application_1/core/shared/appBar.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 import 'package:flutter_application_1/detail/view/components/buy_now_widget.dart';
 import 'package:flutter_application_1/detail/view/components/obtion_container.dart';
 import 'package:flutter_application_1/detail/view/components/rich_text.dart';
 import 'package:flutter_application_1/detail/view/components/size_container.dart';
 import 'package:flutter_application_1/home/view/components/banner.dart';
-import 'package:flutter_application_1/shared/widgets/appBar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,7 +23,7 @@ class DetailPage extends StatelessWidget {
             body: Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 20, left: 24, right: 24),
+          padding: const EdgeInsets.only(top: 40, left: 24, right: 24),
           child: Column(children: [
             CustomAppBar(
               isDetail: true,
@@ -31,7 +33,7 @@ class DetailPage extends StatelessWidget {
               height: 24,
             ),
             HomeBanner(
-              image: "asset/images/catogarytest.png",
+              image: ImagesApp.catogary,
               isDetail: true,
             ),
             SizedBox(
@@ -88,14 +90,13 @@ class DetailPage extends StatelessWidget {
             Align(
                 alignment: Alignment.centerLeft,
                 child: mainTextStyle(
-                    20, "Description", AppColors.backgroundColor)),
+                    20, TextApp.description, AppColors.backgroundColor)),
             SizedBox(
               height: 8,
             ),
             RichTextWidget(
-                text1:
-                    "A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo.. ",
-                text2: "Read More",
+                text1: TextApp.description2,
+                text2: TextApp.readMore,
                 textStyle1: secondTextStyle(1.5, FontWeight.normal, 14),
                 textStyle2: GoogleFonts.sora(
                   letterSpacing: 0,
@@ -105,7 +106,7 @@ class DetailPage extends StatelessWidget {
                   color: AppColors.buttonColor,
                 )),
             SizedBox(
-              height: 16,
+              height: 24,
             ),
             Align(
                 alignment: Alignment.centerLeft,
@@ -118,6 +119,7 @@ class DetailPage extends StatelessWidget {
             ),
           ]),
         ),
+        Spacer(),
         BuyNowWidget()
       ],
     )));

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constant/icons.dart';
+import 'package:flutter_application_1/constant/images.dart';
 
 class ObtionContainer extends StatelessWidget {
   final int index;
@@ -20,15 +20,10 @@ class ObtionContainer extends StatelessWidget {
       width: 44,
       height: 44,
       child: Image.asset(index == 0
-          ? "asset/images/fastDelivery.png"
+          ? ImagesApp.fastDelivery
           : index == 1
-              ? "asset/images/qualityBean.png"
-              : "asset/images/extraMilk.png"),
-      // child: SvgPicture.asset(index == 0
-      //     ? AppIcons.heart
-      //     : index == 1
-      //         ? AppIcons.heart
-      //         : AppIcons.home),
+              ? ImagesApp.qualityBean
+              : ImagesApp.extarMilk),
     );
   }
 }

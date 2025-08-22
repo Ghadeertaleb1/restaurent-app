@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 import 'package:flutter_application_1/home/view/components/banner.dart';
 import 'package:flutter_application_1/home/view/components/bottom_nav_bar.dart';
 import 'package:flutter_application_1/home/view/components/catogary_holder.dart';
@@ -29,8 +29,14 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      textStyle(12, AppColors.lighterGreyColor,
-                          FontWeight.normal, "Location", 1.2, 1),
+                      customText(
+                          12,
+                          AppColors.lighterGreyColor,
+                          FontWeight.normal,
+                          "Location",
+                          1.2,
+                          1,
+                          TextAlign.start),
                       const SizedBox(
                         height: 8,
                       ),
@@ -40,7 +46,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                    top: 211,
+                    top: 290,
                     left: 24,
                     right: 24,
                     child: HomeBanner(

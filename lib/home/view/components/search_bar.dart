@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 
 class CustopmSearchBar extends StatelessWidget {
   const CustopmSearchBar({
@@ -33,8 +33,8 @@ class CustopmSearchBar extends StatelessWidget {
                   const SizedBox(
                     width: 8,
                   ),
-                  textStyle(14, AppColors.lighterGreyColor, FontWeight.normal,
-                      "Search Coffee", 1.2, 0)
+                  customText(14, AppColors.lighterGreyColor, FontWeight.normal,
+                      "Search Coffee", 1.2, 0, TextAlign.start),
                 ],
               ),
             ),

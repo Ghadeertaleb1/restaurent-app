@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constant/app_colors.dart';
-import 'package:flutter_application_1/constant/shared.dart';
+import 'package:flutter_application_1/core/shared/shared_style.dart';
 
 class RateWidget extends StatelessWidget {
   const RateWidget({
@@ -21,7 +21,8 @@ class RateWidget extends StatelessWidget {
         const SizedBox(
           width: 5,
         ),
-        textStyle(9, Colors.white, FontWeight.w600, "4.9", 1.5, 0),
+        customText(
+            9, Colors.white, FontWeight.w600, "4.9", 1.5, 0, TextAlign.end),
       ],
     );
   }
